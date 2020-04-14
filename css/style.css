@@ -23,15 +23,15 @@ body {
   text-decoration: none;
   padding: 22px 0;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
   border-left: none;
   border-right: none; }
   .link__menu:focus {
     outline: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
   .link__menu:hover {
     color: #ffcb78;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
   .link__menu:active {
     color: rgba(255, 203, 120, 0.3);
     border-bottom: 1px solid #fff; }
@@ -44,13 +44,19 @@ body {
 .menu__nav-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  list-style: none; }
+  justify-content: flex-end;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;
+  border-right: none; }
 
 .menu__nav-item {
   margin-left: 55px;
-  margin-bottom: 5px;
-  flex-grow: 1; }
+  margin-top: -1px;
+  margin-bottom: -1px; }
+
+.menu__nav-item:first-of-type {
+  margin-left: 0; }
 
 .page-title {
   color: #fff;
@@ -60,18 +66,19 @@ body {
   line-height: 70px; }
 
 .page-header {
-  padding: 60px 200px 150px 200px;
+  padding: 60px 200px 154px 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffcb78;
   background-image: url("../../img/header-background.png");
+  background-position: center bottom;
   background-size: cover; }
   .page-header__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 127px; }
+    margin-bottom: 120px; }
 
 .section {
   padding: 95px 200px 110px 200px; }
@@ -81,3 +88,6 @@ body {
     line-height: 61px;
     text-transform: uppercase;
     margin-bottom: 100px; }
+
+.page-footer {
+  background-color: #000; }

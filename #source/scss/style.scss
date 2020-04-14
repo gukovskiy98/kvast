@@ -38,16 +38,17 @@ body {
     text-decoration: none;
     padding: 22px 0;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    // костыль с прозрачной рамкой, чтобы рамка списка и рамка кнопки не накладывались друг на друга
+    border: 1px solid transparent;
     border-left: none;
     border-right: none;
     &:focus {
       outline: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     }
     &:hover {
       color: #ffcb78;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     }
     &:active {
       color: rgba(255, 203, 120, 0.3);
@@ -71,13 +72,19 @@ body {
   &__nav-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+    border-right: none;
   }
   &__nav-item {
     margin-left: 55px;
-    margin-bottom: 5px;
-    flex-grow: 1;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  &__nav-item:first-of-type {
+    margin-left: 0;
   }
 }
 
@@ -90,18 +97,19 @@ body {
 }
 
 .page-header {
-  padding: 60px 200px 150px 200px;
+  padding: 60px 200px 154px 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffcb78;
   background-image: url("../../img/header-background.png");
+  background-position: center bottom;
   background-size: cover;
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 127px;
+    margin-bottom: 120px;
   }
   &__bottom {
   }
@@ -210,6 +218,7 @@ body {
 }
 
 .page-footer {
+  background-color: #000;
   &__bottom {
   }
   &__copyright {
