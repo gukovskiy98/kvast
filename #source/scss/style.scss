@@ -36,15 +36,14 @@ body {
     border: 2px solid #834700;
     &:focus {
       outline: none;
-      border-color: #6a3900;
+      border-color: #ffcb78;
     }
     &:hover {
       background-color: #6a3900;
       border-color: #6a3900;
     }
     &:active {
-      color: rgba(106, 57, 0, 0.3);
-      border-color: rgba(106, 57, 0, 0.3);
+      color: rgba(255, 255, 255, 0.3);
     }
   }
   &__ghost-btn {
@@ -59,7 +58,7 @@ body {
     border: 2px solid #834700;
     &:focus {
       outline: none;
-      border-color: #6a3900;
+      border-color: #ffcb78;
     }
     &:hover {
       color: #6a3900;
@@ -163,13 +162,15 @@ body {
   font-size: 70px;
   font-weight: 700;
   line-height: 70px;
+  margin: 0;
 }
 
 .page-main {
 }
 
 .section {
-  padding: 95px calc(25% - 100px) 110px calc(25% - 100px);
+  padding: 95px calc(25% - 100px) 107px calc(25% - 100px);
+  background-color: #fff;
   &__title {
     font-size: 40px;
     font-weight: 700;
@@ -189,8 +190,11 @@ body {
   }
 
   &__item {
-    min-width: 250px;
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 300px;
+    width: 50%;
     padding: 0 32px;
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
@@ -206,11 +210,12 @@ body {
 
   &__item-description {
     position: relative;
+    flex-grow: 1;
     margin-bottom: 60px;
   }
   &__item-pic {
     padding-left: 12px;
-    max-width: 340px;
+    max-width: 100%;
     height: auto;
   }
   &__item-topright-block {
@@ -241,21 +246,70 @@ body {
   &__item-about {
   }
   &__item-bottom-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > * {
+      margin-right: 7px;
+      margin-bottom: 5px;
+    }
   }
   &__item-price {
+    font-weight: 700;
+    flex-grow: 1;
+    text-align: center;
+    min-width: 15%;
   }
 }
 
 .advantages {
-  &__item {
-  }
-  &__item-description {
-  }
-  &__item-title {
+  padding: 80px 0 95px;
+  background-color: #ffcb78;
+  &__title {
+    display: none;
   }
   &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
   }
-  &__title {
+  &__item {
+    position: relative;
+    width: 33.333%;
+    padding-top: 100px;
+    padding-left: calc(16% - 100px);
+    padding-right: calc(15.833% - 100px);
+    border-left: 1px solid #e5b66c;
+    &:first-of-type {
+      border-left: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+      top: 0;
+    }
+  }
+  &__item:first-of-type::before {
+    background: url("../../img/icon-brew.png") no-repeat;
+  }
+  &__item:nth-of-type(2)::before {
+    background: url("../../img/icon-matreshka.png") no-repeat;
+  }
+  &__item:last-of-type::before {
+    background: url("../../img/icon-thumbsup.png") no-repeat;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    color: $default-title-color;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+  &__item-description {
   }
 }
 
