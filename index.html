@@ -7,21 +7,22 @@
     <title>Kvast</title>
   </head>
   <body>
-    <!-- TODO: сделать ссылку на главную для __logo -->
     <header class="page-header">
       <div class="page-header__top">
-        <img src="img/logo.png" alt="KVAST" class="logo" />
+        <a href="#main-page"
+          ><img src="img/logo.png" alt="KVAST" class="logo"
+        /></a>
 
         <nav class="menu">
           <ul class="menu__nav-list">
             <li class="menu__nav-item">
-              <a href="#" class="link__menu"> История</a>
+              <a href="#history" class="link__menu"> История</a>
             </li>
             <li class="menu__nav-item">
               <a href="#" class="link__menu"> Производство</a>
             </li>
             <li class="menu__nav-item">
-              <a href="#" class="link__menu"> Ассортимент</a>
+              <a href="#assortment" class="link__menu"> Ассортимент</a>
             </li>
             <li class="menu__nav-item">
               <a href="#" class="link__menu"> Где купить</a>
@@ -32,7 +33,7 @@
 
       <div class="page-header__bottom">
         <h1 class="page-title page-header__title">
-          Крафтовый квас всему голова!
+          Крафтовый&nbsp;квас всему&nbsp;голова!
         </h1>
       </div>
     </header>
@@ -136,6 +137,7 @@
                 производство.
               </p>
             </li>
+
             <li class="advantages__item">
               <h3 class="advantages__item-title">Не экономим</h3>
               <p class="advantages__item-description">
@@ -147,7 +149,7 @@
         </div>
       </section>
 
-      <section class="section history">
+      <section id="history" class="section history">
         <h2 class="section__title">Немного истории</h2>
         <div class="section__content">
           <ul class="history__list">
@@ -232,7 +234,7 @@
         </div>
       </section>
 
-      <section class="section assortment">
+      <section id="assortment" class="section assortment">
         <h2 class="section__title">Ассортимент</h2>
         <div class="section__content">
           <table class="assortment__table">
@@ -291,6 +293,7 @@
             цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10
             баррелей — скидка 10%.
           </p>
+
           <form action="#" method="post" name="orderform">
             <div class="orderform__field">
               <label for="name">Представьтесь:</label>
@@ -360,7 +363,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__top">
-        <img src="img/logo.png" alt="KVAST" class="logo logo--footer" />
+        <a href="#main-page">
+          <img src="img/logo.png" alt="KVAST" class="logo logo--footer" />
+        </a>
 
         <nav class="menu">
           <ul class="menu__nav-list">
@@ -383,7 +388,7 @@
       <div class="page-footer__bottom">
         <!-- TODO: не забыть скрыть заголовок -->
         <h3 class="page-footer__socials-title">Наши соцсети:</h3>
-        <ul class="page-footer__socials socials">
+        <ul class="page-footer__socials socials__list">
           <li class="socials__item socials__item--in">
             <a
               href="https://instagram.com"
