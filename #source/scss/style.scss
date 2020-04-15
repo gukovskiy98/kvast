@@ -72,6 +72,23 @@ body {
       border-color: rgba(106, 57, 0, 0.3);
     }
   }
+  //Особый стиль для ghost-btn в секции "пресса о нас"
+  .aboutus &__ghost-btn {
+    border-color: #a5a097;
+    color: #a5a097;
+    &:focus {
+      outline: none;
+      border-color: #ffcb78;
+    }
+    &:hover {
+      background-color: #a5a097;
+      color: #fff;
+    }
+    &:active {
+      background-color: #a5a097;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
   &__icon-btn {
   }
 
@@ -106,6 +123,17 @@ body {
   }
 
   &__simple-text {
+    text-decoration: underline;
+    color: #834700;
+    &:focus {
+      outline: 2px solid #ffcb78;
+    }
+    &:hover {
+      color: #6a3900;
+    }
+    &:active {
+      color: #cab7a2;
+    }
   }
 }
 
@@ -268,7 +296,7 @@ body {
 }
 
 .advantages {
-  padding: 80px 0 95px;
+  padding: 80px 0 90px;
   background-color: #ffcb78;
   &__title {
     display: none;
@@ -318,30 +346,85 @@ body {
 }
 
 .history {
+  padding-bottom: 80px;
+  &__title {
+    margin-bottom: 82px;
+  }
+  &__list {
+    list-style: none;
+  }
   &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 64px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     &--left-side {
+      max-width: 61%;
     }
     &--right-side {
     }
   }
+  &__item-title {
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $default-title-color;
+    margin-bottom: 25px;
+  }
   &__item-description {
   }
-  &__item-img {
-  }
   &__item-source {
+    display: block;
+    font-style: italic;
+    margin-bottom: 37px;
+    line-height: 1;
   }
-  &__item-title {
-  }
-  &__list {
+  &__item-img {
+    display: block;
   }
 }
 
 .aboutus {
+  background-color: #ede5d8;
+  padding-bottom: 90px;
+  &__title {
+    margin-bottom: 90px;
+  }
   &__item {
+    position: relative;
+    margin-bottom: 40px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 41px;
+      height: 31px;
+      background: url("../../img/quotes.png") no-repeat;
+      left: -105px;
+      top: 7px;
+    }
   }
   &__item-content {
+    width: 86%;
+    margin-bottom: 35px;
+  }
+  &__item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__item-source {
+    color: $default-title-color;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }
 
