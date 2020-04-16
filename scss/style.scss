@@ -744,3 +744,103 @@ select {
     margin: 0;
   }
 }
+
+@media screen and (max-width: 760px) {
+  .new {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__item {
+      width: 90%;
+      max-width: 400px;
+      padding: 0;
+      margin-bottom: 50px;
+      border: none;
+      border-bottom: 5px solid #000;
+      &:last-of-type {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+    &__item-bottom-block {
+      margin-bottom: 50px;
+    }
+    &__item-price {
+      font-size: 32px;
+    }
+  }
+  .advantages {
+    &__list {
+      // flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 40%;
+      border: none;
+      margin-bottom: 50px;
+      &::before {
+        top: 0;
+        left: 30%;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .orderform {
+    &__field {
+      &--halfwidth {
+        width: 100%;
+      }
+    }
+  }
+  .menu {
+    &__nav-list {
+      justify-content: space-around;
+    }
+    &__nav-item {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page-header,
+  .section,
+  .page-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    &__title {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+  }
+  .menu {
+    &__nav-item {
+      width: 100%;
+      text-align: right;
+    }
+  }
+  .history {
+    &__item {
+      flex-direction: column;
+      > * {
+        max-width: 100%;
+      }
+    }
+  }
+  .aboutus {
+    &__item-source {
+      font-size: 18px;
+      text-align: right;
+    }
+  }
+  .assortment {
+    &__item-title {
+      &--new::after {
+        margin-left: 5px;
+      }
+      width: auto;
+    }
+  }
+}
