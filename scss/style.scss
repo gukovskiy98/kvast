@@ -722,6 +722,10 @@ select {
 }
 
 @media screen and (max-width: 900px) {
+  .upbutton {
+    top: 20px;
+    left: 20px;
+  }
   .page-header,
   .section,
   .page-footer {
@@ -775,10 +779,6 @@ select {
 }
 
 @media screen and (max-width: 760px) {
-  .upbutton {
-    top: 20px;
-    left: 20px;
-  }
   .new {
     &__list {
       flex-direction: column;
