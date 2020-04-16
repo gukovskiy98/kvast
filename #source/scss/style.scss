@@ -73,11 +73,11 @@ input[type="checkbox"] {
     background-color: rgba(0, 0, 0, 0.15);
   }
   &:checked + label::before {
-    background: rgba(0, 0, 0, 0.15) url("../../img/checkbox-sign.png") no-repeat
+    background: rgba(0, 0, 0, 0.15) url("/img/checkbox-sign.png") no-repeat
       center;
   }
   &:active + label::before {
-    background: rgba(0, 0, 0, 0.5) url("../../img/checkbox-sign.png") no-repeat
+    background: rgba(0, 0, 0, 0.5) url("/img/checkbox-sign.png") no-repeat
       center;
   }
 }
@@ -174,16 +174,16 @@ select {
     padding: 34px;
     border: 1px solid #322d24;
     &--fb {
-      background: #1b1b1b url("../../img/fb-icon.png") center no-repeat;
+      background: #1b1b1b url("/img/fb-icon.png") center no-repeat;
     }
     &--in {
-      background: #1b1b1b url("../../img/insta-icon.png") center no-repeat;
+      background: #1b1b1b url("/img/insta-icon.png") center no-repeat;
     }
     &--vk {
-      background: #1b1b1b url("../../img/vk-icon.png") center no-repeat;
+      background: #1b1b1b url("/img/vk-icon.png") center no-repeat;
     }
     &--ha {
-      background: #1b1b1b url("../../img/htmlacademy.png") center no-repeat;
+      background: #1b1b1b url("/img/htmlacademy.png") center no-repeat;
     }
     &:focus {
       outline: none;
@@ -250,7 +250,7 @@ select {
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffcb78;
-  background-image: url("../../img/header-background.png");
+  background-image: url("/img/header-background.png");
   background-position: center bottom;
   background-size: cover;
   &__top {
@@ -429,13 +429,13 @@ select {
     }
   }
   &__item:first-of-type::before {
-    background: url("../../img/icon-brew.png") no-repeat;
+    background: url("/img/icon-brew.png") no-repeat;
   }
   &__item:nth-of-type(2)::before {
-    background: url("../../img/icon-matreshka.png") no-repeat;
+    background: url("/img/icon-matreshka.png") no-repeat;
   }
   &__item:last-of-type::before {
-    background: url("../../img/icon-thumbsup.png") no-repeat;
+    background: url("/img/icon-thumbsup.png") no-repeat;
   }
 
   &__item-title {
@@ -502,7 +502,7 @@ select {
       display: inline-block;
       width: 41px;
       height: 31px;
-      background: url("../../img/quotes.png") no-repeat;
+      background: url("/img/quotes.png") no-repeat;
       left: -105px;
       top: 7px;
     }
@@ -648,8 +648,6 @@ select {
     line-height: 20px;
     color: #989898;
     max-width: 30%;
-  }
-  &__socials {
   }
 }
 
