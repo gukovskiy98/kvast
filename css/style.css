@@ -3,7 +3,8 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 30px;
-  color: #404040; }
+  color: #404040;
+  scroll-behavior: smooth; }
 
 body {
   max-width: 1920px;
@@ -19,11 +20,32 @@ body {
   padding: 0;
   box-sizing: border-box; }
 
+.upbutton {
+  position: fixed;
+  cursor: pointer;
+  top: 100px;
+  left: 40px;
+  display: inline-block;
+  text-align: center;
+  font-size: 50px;
+  color: #834700;
+  width: 60px;
+  height: 60px;
+  background-color: #8f8a81;
+  border: 5px solid #834700;
+  border-radius: 50%;
+  z-index: 1000; }
+  .upbutton span {
+    vertical-align: middle; }
+  .upbutton--hidden {
+    display: none; }
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 select,
 textarea {
+  transition: all 0.4s ease;
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.3);
   border: none;
@@ -93,6 +115,7 @@ select {
     right: 14px; }
 
 .link__brown-btn {
+  transition: all 0.4s ease;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -113,6 +136,7 @@ select {
     color: rgba(255, 255, 255, 0.3); }
 
 .link__ghost-btn {
+  transition: all 0.4s ease;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -146,6 +170,7 @@ select {
     color: rgba(255, 255, 255, 0.3); }
 
 .link__icon-btn {
+  transition: all 0.4s ease;
   display: inline-block;
   padding: 34px;
   border: 1px solid #322d24; }
@@ -167,6 +192,7 @@ select {
     opacity: 0.5; }
 
 .link__menu {
+  transition: all 0.4s ease;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -634,6 +660,9 @@ select {
     margin: 0 10px; } }
 
 @media screen and (max-width: 500px) {
+  .upbutton {
+    top: 20px;
+    left: 20px; }
   .page-header,
   .section,
   .page-footer {
