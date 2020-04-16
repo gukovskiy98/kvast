@@ -68,9 +68,9 @@ input[type="checkbox"] {
   input[type="checkbox"]:hover + label::before {
     background-color: rgba(0, 0, 0, 0.15); }
   input[type="checkbox"]:checked + label::before {
-    background: rgba(0, 0, 0, 0.15) url("/img/checkbox-sign.png") no-repeat center; }
+    background: rgba(0, 0, 0, 0.15) url("../img/checkbox-sign.png") no-repeat center; }
   input[type="checkbox"]:active + label::before {
-    background: rgba(0, 0, 0, 0.5) url("/img/checkbox-sign.png") no-repeat center; }
+    background: rgba(0, 0, 0, 0.5) url("../img/checkbox-sign.png") no-repeat center; }
 
 select {
   -webkit-appearance: none;
@@ -150,13 +150,13 @@ select {
   padding: 34px;
   border: 1px solid #322d24; }
   .link__icon-btn--fb {
-    background: #1b1b1b url("/img/fb-icon.png") center no-repeat; }
+    background: #1b1b1b url("../img/fb-icon.png") center no-repeat; }
   .link__icon-btn--in {
-    background: #1b1b1b url("/img/insta-icon.png") center no-repeat; }
+    background: #1b1b1b url("../img/insta-icon.png") center no-repeat; }
   .link__icon-btn--vk {
-    background: #1b1b1b url("/img/vk-icon.png") center no-repeat; }
+    background: #1b1b1b url("../img/vk-icon.png") center no-repeat; }
   .link__icon-btn--ha {
-    background: #1b1b1b url("/img/htmlacademy.png") center no-repeat; }
+    background: #1b1b1b url("../img/htmlacademy.png") center no-repeat; }
   .link__icon-btn:focus {
     outline: none;
     border-color: #ffcb78; }
@@ -208,7 +208,7 @@ select {
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffcb78;
-  background-image: url("/img/header-background.png");
+  background-image: url("../img/header-background.png");
   background-position: center bottom;
   background-size: cover; }
   .page-header__top {
@@ -361,11 +361,11 @@ select {
       display: inline-block;
       top: 0; }
   .advantages__item:first-of-type::before {
-    background: url("/img/icon-brew.png") no-repeat; }
+    background: url("../img/icon-brew.png") no-repeat; }
   .advantages__item:nth-of-type(2)::before {
-    background: url("/img/icon-matreshka.png") no-repeat; }
+    background: url("../img/icon-matreshka.png") no-repeat; }
   .advantages__item:last-of-type::before {
-    background: url("/img/icon-thumbsup.png") no-repeat; }
+    background: url("../img/icon-thumbsup.png") no-repeat; }
   .advantages__item-title {
     font-size: 20px;
     color: #000;
@@ -417,7 +417,7 @@ select {
       display: inline-block;
       width: 41px;
       height: 31px;
-      background: url("/img/quotes.png") no-repeat;
+      background: url("../img/quotes.png") no-repeat;
       left: -105px;
       top: 7px; }
   .aboutus__item-content {
