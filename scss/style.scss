@@ -25,6 +25,7 @@ body {
   box-sizing: border-box;
 }
 
+//! СТИЛИЗАЦИЯ ПОЛЕЙ ВВОДА
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -56,7 +57,7 @@ textarea {
 input[type="checkbox"] {
   position: absolute;
   opacity: 0;
-  & + label::before {
+  label::before {
     content: "";
     display: inline-block;
     width: 36px;
@@ -88,6 +89,8 @@ select {
   appearance: none;
 }
 
+//! ОБОЛОЧКА ДЛЯ СЕЛЕКТА ДЛЯ ДОБАВЛЕНИЯ ПСЕВДОЭЛЕМЕНТА
+//! (СТРЕЛКА СПРАВА)
 .select-wrapper {
   position: relative;
   &::before {
@@ -105,6 +108,7 @@ select {
   }
 }
 
+//! СТИЛИЗАЦИЯ КНОПОК И ССЫЛОК
 .link {
   &__brown-btn {
     display: inline-block;
@@ -152,7 +156,8 @@ select {
       border-color: rgba(106, 57, 0, 0.3);
     }
   }
-  //Особый стиль для ghost-btn в секции "пресса о нас"
+
+  //! Особый стиль для ghost-btn в секции "пресса о нас"
   .aboutus &__ghost-btn {
     border-color: #a5a097;
     color: #a5a097;
@@ -249,7 +254,7 @@ select {
   max-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffcb78;
+  background-color: #834700;
   background-image: url("../img/header-background.png");
   background-position: center bottom;
   background-size: cover;
@@ -290,7 +295,7 @@ select {
   }
   &--footer {
     width: 60%;
-    margin-right: 100px;
+    margin-right: 9.823%;
   }
 }
 
@@ -369,7 +374,7 @@ select {
     width: 100%;
     color: #000;
     margin-bottom: 8px;
-    & td {
+    td {
       line-height: 1;
       border: 1px solid #e5e5e5;
       padding: 10px 10px 14px 10px;
@@ -385,7 +390,7 @@ select {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    & > * {
+    > * {
       margin-right: 7px;
       margin-bottom: 5px;
     }
@@ -536,19 +541,19 @@ select {
     border-collapse: collapse;
     text-transform: uppercase;
     width: 100%;
-    & tr {
+    tr {
       border-bottom: 1px solid #e5e5e5;
-      & td:last-of-type,
-      & th:last-of-type {
+      td:last-of-type,
+      th:last-of-type {
         text-align: right;
       }
     }
-    & th,
-    & td {
+    th,
+    td {
       padding: 24px 0;
       text-align: left;
     }
-    & th {
+    th {
       font-size: 11px;
       padding-bottom: 40px;
       font-weight: 400;
@@ -594,7 +599,7 @@ select {
     font-weight: 700;
     width: 100%;
     margin-bottom: 20px;
-    & label {
+    label {
       display: inline-block;
       color: $default-title-color;
       margin-bottom: 3px;
@@ -638,6 +643,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 0;
     width: 70%;
     a {
       margin-left: 150px;
@@ -663,5 +669,78 @@ select {
   }
   &__item-sign {
     display: none;
+  }
+}
+
+//! МЕДИА ЗАПРОСЫ
+
+@media screen and (max-width: 960px) and (min-width: 900px) {
+  .page-header,
+  .section,
+  .page-footer {
+    padding: 55px 40px 20px 40px;
+  }
+  .page-header {
+    padding-bottom: 120px;
+    &__top {
+      margin-bottom: 60px;
+    }
+  }
+  .page-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .page-header,
+  .section,
+  .page-footer {
+    padding: 50px 40px 30px 40px;
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+  .page-header {
+    background: #000;
+    padding-top: 20px;
+    &__top {
+      margin-bottom: 0;
+    }
+    &__bottom {
+      display: none;
+    }
+  }
+  .menu {
+    width: 80%;
+    &--footer {
+      margin-right: 0;
+      width: 80%;
+    }
+  }
+  .orderform {
+    &__description {
+      width: 100%;
+    }
+    &__form {
+      width: 100%;
+    }
+  }
+  .page-footer {
+    &__bottom {
+      justify-content: center;
+    }
+    &__info {
+      display: none;
+    }
+    &__copyright {
+      width: auto;
+      a {
+        margin: 0;
+      }
+    }
+  }
+  .logo--footer {
+    margin: 0;
   }
 }
