@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
@@ -5,7 +6,7 @@ html {
   color: #404040; }
 
 body {
-  max-width: 1920px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -17,6 +18,79 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  font: inherit;
+  text-transform: uppercase;
+  padding: 18px 20px;
+  line-height: 1; }
+  input[type="text"]:hover,
+  input[type="tel"]:hover,
+  input[type="email"]:hover,
+  select:hover,
+  textarea:hover {
+    background-color: rgba(0, 0, 0, 0.15); }
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid #8f8a81;
+    background-color: #fff;
+    color: #000; }
+
+textarea {
+  resize: none;
+  height: 122px;
+  line-height: 1.2; }
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; }
+  input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    margin-right: 17px;
+    background-color: rgba(0, 0, 0, 0.1); }
+  input[type="checkbox"]:focus + label::before {
+    background-color: rgba(0, 0, 0, 0.15);
+    outline: 2px solid rgba(0, 0, 0, 0.5); }
+  input[type="checkbox"]:hover + label::before {
+    background-color: rgba(0, 0, 0, 0.15); }
+  input[type="checkbox"]:checked + label::before {
+    background: rgba(0, 0, 0, 0.15) url("../../img/checkbox-sign.png") no-repeat center; }
+  input[type="checkbox"]:active + label::before {
+    background: rgba(0, 0, 0, 0.5) url("../../img/checkbox-sign.png") no-repeat center; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.select-wrapper {
+  position: relative; }
+  .select-wrapper::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border: 10px solid rgba(0, 0, 0, 0.3);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom: none;
+    position: absolute;
+    top: 22px;
+    right: 14px; }
 
 .link__brown-btn {
   display: inline-block;
@@ -70,6 +144,27 @@ body {
   .aboutus .link__ghost-btn:active {
     background-color: #a5a097;
     color: rgba(255, 255, 255, 0.3); }
+
+.link__icon-btn {
+  display: inline-block;
+  padding: 34px;
+  border: 1px solid #322d24; }
+  .link__icon-btn--fb {
+    background: #1b1b1b url("../../img/fb-icon.png") center no-repeat; }
+  .link__icon-btn--in {
+    background: #1b1b1b url("../../img/insta-icon.png") center no-repeat; }
+  .link__icon-btn--vk {
+    background: #1b1b1b url("../../img/vk-icon.png") center no-repeat; }
+  .link__icon-btn--ha {
+    background: #1b1b1b url("../../img/htmlacademy.png") center no-repeat; }
+  .link__icon-btn:focus {
+    outline: none;
+    border-color: #ffcb78; }
+  .link__icon-btn:hover {
+    border-color: #5f5037;
+    color: #fff; }
+  .link__icon-btn:active {
+    opacity: 0.5; }
 
 .link__menu {
   display: inline-block;
@@ -126,6 +221,8 @@ body {
   width: 140px;
   height: 76px;
   vertical-align: top; }
+  .logo--footer {
+    margin: 0 40px; }
 
 .menu {
   width: 75%; }
@@ -142,6 +239,9 @@ body {
     margin-bottom: -1px; }
   .menu__nav-item:first-of-type {
     margin-left: 0; }
+  .menu--footer {
+    width: 60%;
+    margin-right: 100px; }
 
 .page-title {
   color: #fff;
@@ -334,5 +434,115 @@ body {
     font-weight: 700;
     text-transform: uppercase; }
 
+.assortment {
+  padding-top: 100px;
+  padding-bottom: 94px;
+  line-height: 1; }
+  .assortment__title {
+    margin-bottom: 70px; }
+  .assortment__table {
+    border-collapse: collapse;
+    text-transform: uppercase;
+    width: 100%; }
+    .assortment__table tr {
+      border-bottom: 1px solid #e5e5e5; }
+      .assortment__table tr td:last-of-type,
+      .assortment__table tr th:last-of-type {
+        text-align: right; }
+    .assortment__table th,
+    .assortment__table td {
+      padding: 24px 0;
+      text-align: left; }
+    .assortment__table th {
+      font-size: 11px;
+      padding-bottom: 40px;
+      font-weight: 400;
+      color: #999999; }
+  .assortment__item-title {
+    font-weight: 700;
+    color: #000;
+    width: 50%; }
+    .assortment__item-title--new::after {
+      content: "Новинка";
+      display: inline-block;
+      font-size: 8px;
+      background-color: #000;
+      margin-left: 22px;
+      color: #fff;
+      vertical-align: super;
+      padding: 3px 4px;
+      border-radius: 2px; }
+
+.orderform {
+  background-color: #ffcb78;
+  padding-bottom: 109px; }
+  .orderform__title {
+    margin-bottom: 88px; }
+  .orderform__description {
+    width: 90%;
+    margin-bottom: 66px; }
+  .orderform__form {
+    width: 79%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .orderform__field {
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 20px; }
+    .orderform__field label {
+      display: inline-block;
+      color: #000;
+      margin-bottom: 3px; }
+    .orderform__field input[type="text"],
+    .orderform__field input[type="tel"],
+    .orderform__field input[type="email"],
+    .orderform__field select,
+    .orderform__field textarea {
+      display: block;
+      width: 100%; }
+    .orderform__field--halfwidth {
+      width: 46%; }
+  .orderform__checkbox {
+    margin-top: 10px;
+    margin-bottom: 32px; }
+
 .page-footer {
+  padding: 60px calc(15.833% - 100px) 20px calc(16% - 100px);
   background-color: #000; }
+  .page-footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 47px; }
+  .page-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .page-footer__socials-title {
+    display: none; }
+  .page-footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%; }
+    .page-footer__copyright a {
+      margin-left: 150px; }
+  .page-footer__info {
+    font-size: 14px;
+    line-height: 20px;
+    color: #989898;
+    max-width: 30%; }
+
+.socials__list {
+  list-style: none;
+  font-size: 0;
+  line-height: 0; }
+
+.socials__item {
+  display: inline-block;
+  vertical-align: top; }
+
+.socials__item-sign {
+  display: none; }

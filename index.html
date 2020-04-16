@@ -249,7 +249,7 @@
       </section>
 
       <section id="assortment" class="section assortment">
-        <h2 class="section__title">Ассортимент</h2>
+        <h2 class="section__title assortment__title">Ассортимент</h2>
         <div class="section__content">
           <table class="assortment__table">
             <thead class="assortment__thead">
@@ -300,7 +300,7 @@
       </section>
 
       <section class="section orderform">
-        <h2 class="section__title">Заказать</h2>
+        <h2 class="section__title orderform__title">Заказать</h2>
         <div class="section__content">
           <p class="orderform__description">
             Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем
@@ -308,63 +308,61 @@
             баррелей — скидка 10%.
           </p>
 
-          <form action="#" method="post" name="orderform">
+          <form
+            class="orderform__form"
+            action="#"
+            method="post"
+            name="orderform"
+          >
             <div class="orderform__field">
               <label for="name">Представьтесь:</label>
-              <br />
               <input type="text" id="name" name="name" required />
             </div>
 
             <div class="orderform__field orderform__field--halfwidth">
               <label for="tel1">Номер Телефона:</label>
-              <br />
               <input type="tel" id="tel1" name="tel1" required />
             </div>
 
             <div class="orderform__field orderform__field--halfwidth">
               <label for="tel2">Доп. номер:</label>
-              <br />
               <input type="tel" id="tel2" name="tel2" />
             </div>
 
             <div class="orderform__field">
               <label for="email">Email:</label>
-              <br />
               <input type="email" id="email" name="email" required />
             </div>
 
             <div class="orderform__field">
               <label for="amount">Объём заказа:</label>
-              <br />
-              <select name="amount" id="amount">
-                <option value=">5" selected>
-                  От 5 до 10 баррелей в неделю
-                </option>
-                <option value=">11">
-                  От 11 до 15 баррелей в неделю
-                </option>
-                <option value=">16">
-                  От 15 баррелей в неделю
-                </option>
-              </select>
+              <div class="select-wrapper">
+                <select name="amount" id="amount">
+                  <option value=">5" selected>
+                    От 5 до 10 баррелей в неделю
+                  </option>
+                  <option value=">11">
+                    От 11 до 15 баррелей в неделю
+                  </option>
+                  <option value=">16">
+                    От 15 баррелей в неделю
+                  </option>
+                </select>
+              </div>
             </div>
 
             <div class="orderform__field">
-              <label for="comment">Доп. комментарий:</label>
-              <br />
-              <!-- ! добавить resize: none -->
-              <textarea
-                name="comment"
-                id="comment"
-                cols="60"
-                rows="5"
-              ></textarea>
+              <label for="comment">
+                Доп. комментарий:
+              </label>
+              <textarea name="comment" id="comment"></textarea>
             </div>
 
-            <!-- ! спрятать input и нарисовать галочку согласно дизайну -->
-            <div class="orderform__field">
+            <div class="orderform__field orderform__checkbox">
               <input type="checkbox" name="spam" id="spam" checked />
-              <label for="spam">Я согласен получать квасную рассылку</label>
+              <label for="spam">
+                Я согласен получать квасную рассылку
+              </label>
             </div>
 
             <button type="submit" class="link__brown-btn">
@@ -381,7 +379,7 @@
           <img src="img/logo.png" alt="KVAST" class="logo logo--footer" />
         </a>
 
-        <nav class="menu">
+        <nav class="menu menu--footer">
           <ul class="menu__nav-list">
             <li class="menu__nav-item">
               <a href="#" class="link__menu"> История</a>
@@ -403,28 +401,32 @@
         <!-- TODO: не забыть скрыть заголовок -->
         <h3 class="page-footer__socials-title">Наши соцсети:</h3>
         <ul class="page-footer__socials socials__list">
-          <li class="socials__item socials__item--in">
+          <li class="socials__item socials__item">
             <a
               href="https://instagram.com"
-              class="link__icon-btn"
+              class="link__icon-btn link__icon-btn--in"
               target="_blank"
             >
               <span class="socials__item-sign">Instagram</span>
             </a>
           </li>
 
-          <li class="socials__item socials__item--fb">
+          <li class="socials__item socials__item">
             <a
               href="https://facebook.com"
-              class="link__icon-btn"
+              class="link__icon-btn link__icon-btn--fb"
               target="_blank"
             >
               <span class="socials__item-sign">Facebook</span>
             </a>
           </li>
 
-          <li class="socials__item socials__item--vk">
-            <a href="https://vk.com" class="link__icon-btn" target="_blank">
+          <li class="socials__item socials__item">
+            <a
+              href="https://vk.com"
+              class="link__icon-btn link__icon-btn--vk"
+              target="_blank"
+            >
               <span class="socials__item-sign">ВКонтакте</span>
             </a>
           </li>
@@ -437,10 +439,12 @@
 
           <a
             href="https://htmlacademy.ru"
-            class="link__icon-btn"
+            class="link__icon-btn link__icon-btn--ha"
             target="_blank"
           >
-            HTML Academy
+            <span class="socials__item-sign">
+              HTML Academy
+            </span>
           </a>
 
           <span class="page-footer__info">
