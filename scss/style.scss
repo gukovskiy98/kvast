@@ -55,7 +55,7 @@ input[type="tel"],
 input[type="email"],
 select,
 textarea {
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.3);
   border: none;
@@ -136,7 +136,7 @@ select {
 //! СТИЛИЗАЦИЯ КНОПОК И ССЫЛОК
 .link {
   &__brown-btn {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
@@ -160,7 +160,7 @@ select {
     }
   }
   &__ghost-btn {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
@@ -202,7 +202,7 @@ select {
     }
   }
   &__icon-btn {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     padding: 34px;
     border: 1px solid #322d24;
@@ -232,7 +232,7 @@ select {
   }
 
   &__menu {
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
