@@ -655,6 +655,10 @@ select {
       top: 0;
       left: 30%;
       transform: scale(1.2); }
+  .assortment__item-title {
+    width: auto; }
+    .assortment__item-title--new::after {
+      margin-left: 5px; }
   .orderform__field--halfwidth {
     width: 100%; }
   .menu__nav-list {
@@ -683,7 +687,9 @@ select {
   .aboutus__item-source {
     font-size: 18px;
     text-align: right; }
+  .assortment__table {
+    font-size: 12px; }
   .assortment__item-title {
     width: auto; }
     .assortment__item-title--new::after {
-      margin-left: 5px; } }
+      margin-left: 0; } }

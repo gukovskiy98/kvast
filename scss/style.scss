@@ -820,6 +820,14 @@ select {
       }
     }
   }
+  .assortment {
+    &__item-title {
+      &--new::after {
+        margin-left: 5px;
+      }
+      width: auto;
+    }
+  }
   .orderform {
     &__field {
       &--halfwidth {
@@ -869,9 +877,12 @@ select {
     }
   }
   .assortment {
+    &__table {
+      font-size: 12px;
+    }
     &__item-title {
       &--new::after {
-        margin-left: 5px;
+        margin-left: 0;
       }
       width: auto;
     }
