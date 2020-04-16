@@ -54,7 +54,7 @@ textarea {
 input[type="checkbox"] {
   position: absolute;
   opacity: 0; }
-  input[type="checkbox"] label::before {
+  input[type="checkbox"] + label::before {
     content: "";
     display: inline-block;
     width: 36px;
@@ -561,7 +561,7 @@ select {
     font-size: 48px;
     line-height: 48px; } }
 
-@media screen and (max-width: 900px) and (min-width: 700px) {
+@media screen and (max-width: 900px) {
   .page-header,
   .section,
   .page-footer {
